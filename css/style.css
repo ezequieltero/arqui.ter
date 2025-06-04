@@ -1,0 +1,235 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #121212;
+  color: #f0f0f0;
+}
+header {
+  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../img/fondos/fondo.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 3rem 2rem;
+  text-align: center;
+  color: white;
+}
+header input {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  width: 60%;
+  max-width: 400px;
+  border-radius: 10px;
+  border: none;
+}
+h2 {
+  text-align: center;
+  margin-top: 2rem;
+}
+.productos {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+  gap: 1rem;
+  justify-content: center;
+}
+.producto {
+  background: #1e1e1e;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 250px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  text-align: center;
+}
+.producto img {
+  width: 100%;
+  border-radius: 6px;
+}
+button {
+  padding: 0.5rem;
+  border: none;
+  background: #4caf50;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.carrito {
+  background: #1a1a1a;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 10px;
+}
+a {
+  color: #4caf50;
+  font-weight: bold;
+}
+
+
+
+#slider {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+  color: white;
+}
+.slider-img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  animation: sliderAnimation 18s infinite;
+  opacity: 0;
+}
+.fondo1 { background-image: url('../img/fondos/fondo.jpg'); animation-delay: 0s; }
+.fondo2 { background-image: url('../img/fondos/fondo2.jpg'); animation-delay: 6s; }
+.fondo3 { background-image: url('../img/fondos/fondo3.jpg'); animation-delay: 12s; }
+
+@keyframes sliderAnimation {
+  0% { opacity: 0; }
+  5% { opacity: 1; }
+  30% { opacity: 1; }
+  35% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+.slider-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.slider-content input {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  width: 60%;
+  max-width: 400px;
+  border-radius: 10px;
+  border: none;
+}
+
+
+
+.slider-img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  animation: sliderAnimation 30s infinite;
+  opacity: 0;
+}
+.fondo1 { background-image: url('../img/fondos/fondo1.jpg'); animation-delay: 0s; }
+.fondo2 { background-image: url('../img/fondos/fondo2.jpg'); animation-delay: 6s; }
+.fondo3 { background-image: url('../img/fondos/fondo3.jpg'); animation-delay: 12s; }
+.fondo4 { background-image: url('../img/fondos/fondo4.jpg'); animation-delay: 18s; }
+.fondo5 { background-image: url('../img/fondos/fondo5.jpg'); animation-delay: 24s; }
+
+@keyframes sliderAnimation {
+  0% { opacity: 0; }
+  5% { opacity: 1; }
+  20% { opacity: 1; }
+  25% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+
+
+.form-container {
+  max-width: 400px;
+  margin: 3rem auto;
+  background: #1e1e1e;
+  padding: 2rem;
+  border-radius: 10px;
+  color: white;
+}
+.form-container input,
+.form-container textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  border-radius: 6px;
+  border: none;
+}
+.form-container button {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  background: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+}
+.modal-contenido {
+  background: #1e1e1e;
+  color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+}
+.modal-botones {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+
+
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin: 1rem;
+  background: #1e1e1e;
+  padding: 1rem;
+  border-radius: 10px;
+}
+.filtros select,
+.filtros input[type=range] {
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: none;
+}
+
+
+
+.tabs-nav {
+  display: flex;
+  overflow-x: auto;
+  background: #1a1a1a;
+  padding: 0.5rem;
+  gap: 0.5rem;
+}
+.tabs-nav button {
+  background: transparent;
+  border: none;
+  color: #f0f0f0;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.tabs-nav button:hover,
+.tabs-nav .tab-activa {
+  background: #4caf50;
+  color: white;
+  border-radius: 5px;
+}

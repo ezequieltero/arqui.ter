@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Perfil | La Roca</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="form-container">
+    <h2>Mi Perfil</h2>
+    <p><strong>Nombre:</strong> <span id="user-name"></span></p>
+    <p><strong>Correo:</strong> <span id="user-email"></span></p>
+    <h3>Dirección</h3>
+    <textarea id="direccion" placeholder="Escribe tu dirección aquí..."></textarea>
+    <button onclick="guardarDireccion()">Guardar dirección</button>
+    <h3>Historial de compras</h3>
+    <ul id="historial-compras"></ul>
+    <button onclick="logout()">Cerrar sesión</button>
+  </div>
+  <script src="js/auth.js"></script>
+</body>
+</html>

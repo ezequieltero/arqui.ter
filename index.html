@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Constructora La Roca - Tienda</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  
+
+<header id="slider">
+  <div class="slider-img fondo1"></div>
+  <div class="slider-img fondo2"></div>
+  <div class="slider-img fondo3"></div>
+  <div class="slider-img fondo4"></div>
+  <div class="slider-img fondo5"></div>
+  <div class="slider-content">
+    <h1>Constructora La Roca</h1>
+    <p>Software, cursos y recursos de arquitectura</p>
+    
+<section id="filtros" class="filtros">
+  <select id="filtro-categoria" onchange="filtrarProductos()">
+    <option value="">Todas las categorías</option>
+    <option value="software">Software</option>
+    <option value="cursos">Cursos</option>
+    <option value="recursos">Recursos</option>
+  </select>
+
+  <label for="filtro-precio">Precio máximo: $<span id="precio-valor">1000</span></label>
+  <input type="range" id="filtro-precio" min="0" max="1000" value="1000" oninput="document.getElementById('precio-valor').innerText=this.value" onchange="filtrarProductos()" />
+</section>
+
+  <input type="text" id="buscador" placeholder="Buscar productos..." onkeyup="buscarProductos()" />
+  </div>
+</header>
+
+<nav class="tabs-nav">
+  <button onclick="mostrarDepartamento('arquitectura')" class="tab-activa">Arquitectura</button>
+  <button onclick="mostrarDepartamento('finanzas')">Finanzas</button>
+  <button onclick="mostrarDepartamento('diseño')">Diseño</button>
+  <button onclick="mostrarDepartamento('fotografia')">Fotografía</button>
+  <button onclick="mostrarDepartamento('inversiones')">Inversiones</button>
+  <button onclick="mostrarDepartamento('instrumentos')">Cursos de Instrumentos</button>
+  <button onclick="mostrarDepartamento('ingles')">Curso de Inglés</button>
+  <button onclick="mostrarDepartamento('excel')">Cursos de Excel</button>
+  <button onclick="mostrarDepartamento('desarrollo')">Desarrollo Apps/Web</button>
+  <button onclick="mostrarDepartamento('fisioterapia')">Fisioterapia</button>
+  <button onclick="mostrarDepartamento('ingenieria')">Ingeniería</button>
+  <button onclick="mostrarDepartamento('nutriologia')">Nutriología</button>
+</nav>
+
+
+
+
+  <main>
+    <h2>Software de Arquitectura</h2>
+    <section class="productos" id="software"></section>
+
+    <h2>Cursos</h2>
+    <section class="productos" id="cursos"></section>
+
+    <h2>Extras y Recursos</h2>
+    <section class="productos" id="recursos"></section>
+  </main>
+
+  <div class="carrito" id="carrito">
+    <h2>Carrito de compras</h2>
+    <ul id="lista-carrito"></ul>
+    <p id="total">Total: $0 MXN</p>
+    <a id="whatsapp-link" target="_blank">Enviar pedido por WhatsApp</a>
+  </div>
+
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/search.js"></script>
+
+<div id="modal-confirmacion" class="modal">
+  <div class="modal-contenido">
+    <h2>Confirmar pedido</h2>
+    <ul id="resumen-pedido"></ul>
+    <p id="resumen-total"></p>
+    <div class="modal-botones">
+      <button onclick="confirmarEnvio()">Enviar por WhatsApp</button>
+      <button onclick="cerrarModal()">Cancelar</button>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
